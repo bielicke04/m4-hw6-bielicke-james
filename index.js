@@ -6,11 +6,13 @@ function getPizzaOrder() {
   var deliveryFee = 3.5
   var toppingsFee = 1.5
   var basePrice = 10
+  
 
   alert("Hi, Thanks for ordering with Web to Pizza!")
   var pizza = {
     // set the 'cost' property to the basePrice
     // YOUR CODE HERE
+    cost: basePrice
   }
 
   var crust = prompt(
