@@ -25,9 +25,9 @@ function getPizzaOrder() {
   // to pizza.cost
   // YOUR CODE HERE
     pizza.crust = crust.toLowerCase().trim()
-    if (crust === 'thick') {
-      pizza.cost += thickCrustUpcharge
-      }
+    if (crust === "thick") {
+        pizza.cost += thickCrustUpcharge 
+        }
     
   
 
@@ -40,11 +40,12 @@ function getPizzaOrder() {
   // the number of toppings added to pizza.cost
   // YOUR CODE HERE
 
-  if (toppings === "") {
-    pizza.toppings = []
+  if (toppings === "") { //empty string from prompt-user
+    pizza.toppings = []; //set as empty array
       }
       else {
-        pizza.toppings = toppings.split(",")
+        pizza.toppings = pizza.toppings.split(","); //split toppings array
+        pizza.cost += pizza.toppings * toppingsFee; // can't get this to work
       }
 
 
