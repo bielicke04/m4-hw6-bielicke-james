@@ -32,6 +32,7 @@ function getPizzaOrder() {
   
 
   var toppings = prompt("Please enter additional toppings (comma separated)")
+
   // HINT: prompt() will return an empty string "" if the user presses 'OK' without entering a value
   // if the user enters toppings, use .split(",") to separate toppings into an array
   // if no toppings are given, make sure pizza.toppings is set to []
@@ -39,11 +40,22 @@ function getPizzaOrder() {
   // the number of toppings added to pizza.cost
   // YOUR CODE HERE
 
+  if (toppings === "") {
+    pizza.toppings = []
+      }
+      else {
+        pizza.toppings = toppings.split(",")
+      }
+
+
+
   var extraCheese = confirm("Would you like extra cheese?")
   // HINT: confirm() returns a boolean
   // if the user specifies extra cheese, set pizza.extraCheese to true or false
   // if the user specifies extra cheese, add extraCheeseUpcharge to pizza.cost
   // YOUR CODE HERE
+
+
 
   var isDelivery = confirm("Is your order for Delivery?")
   // HINT: confirm() returns a boolean
