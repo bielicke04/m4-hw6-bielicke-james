@@ -1,5 +1,6 @@
 // This function gets user input and creates a new pizza order object
 // You only need to add code to this function
+
 function getPizzaOrder() {
   var extraCheeseUpcharge = 1.5
   var thickCrustUpcharge = 2
@@ -30,7 +31,6 @@ function getPizzaOrder() {
         }
     
   
-
   var toppings = prompt("Please enter additional toppings (comma separated)")
 
   // HINT: prompt() will return an empty string "" if the user presses 'OK' without entering a value
@@ -44,8 +44,8 @@ function getPizzaOrder() {
     pizza.toppings = []; //set as empty array
       }
       else {
-        pizza.toppings = pizza.toppings.split(","); //split toppings array
-        pizza.cost += pizza.toppings * toppingsFee; // can't get this to work
+        pizza.toppings = pizza.toppings.split(",") //split toppings array
+        pizza.cost += (pizza.toppings * toppingsFee) //not working!?!?
       }
 
 
@@ -56,6 +56,12 @@ function getPizzaOrder() {
   // if the user specifies extra cheese, add extraCheeseUpcharge to pizza.cost
   // YOUR CODE HERE
 
+  if (extraCheese === true) { //similar to Q2 structure
+      pizza.extraCheese = true
+        pizza.cost += extraCheeseUpcharge
+        }
+        
+
 
 
   var isDelivery = confirm("Is your order for Delivery?")
@@ -64,6 +70,15 @@ function getPizzaOrder() {
   // if order is NOT for delivery, set pizza.saleType to "take-out"
   // if order if for delivery, add deliveryFee to pizza.cost
   // YOUR CODE HERE
+
+  if (isDelivery === true) { //similar to Q2-3 structure
+      pizza.saleType = "delivery" 
+      pizza.cost += deliveryFee
+      }
+      else {
+        pizza.saleType = "take-out"
+        }
+
 
   return pizza
 }
